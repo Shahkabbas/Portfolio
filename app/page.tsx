@@ -9,7 +9,6 @@ import {
   Linkedin,
   Mail,
   MapPin,
-  Download,
   Menu,
   ArrowDown,
   Pill,
