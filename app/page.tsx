@@ -61,24 +61,6 @@ export default function Portfolio() {
 
   const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "50%"])
 
-// Resume Handler 
- <Button
-  variant="outline"
-  size="icon"
-  asChild
->
-  <a
-    href="/resume.pdf"
-    download
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <Download className="h-4 w-4" />
-    <span className="sr-only">Download Resume</span>
-  </a>
-</Button>
-
-
   // Smooth scroll function
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId)
