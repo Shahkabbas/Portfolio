@@ -334,7 +334,7 @@ ACHIEVEMENTS
             >
               {[
                 { icon: Linkedin, href: "https://linkedin.com/in/shah-kashif-abbas", label: "LinkedIn" },
-                { icon: Instagram, href: "https://instagram.com", label: "Instagram" },
+                { icon: Instagram, href: "https://instagram.com/s.kashifabbas", label: "Instagram" },
                 { icon: Mail, href: "mailto:shahkabbas@gmail.com", label: "Gmail" },
               ].map(({ icon: Icon, href, label }, index) => (
                 <motion.div
@@ -1032,7 +1032,7 @@ ACHIEVEMENTS
                     <div className="grid grid-cols-1 gap-3">
                       {[
                         { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com/in/shah-kashif-abbas" },
-                        { icon: Instagram, label: "Instagram", href: "https://instagram.com" },
+                        { icon: Instagram, label: "Instagram", href: "https://instagram.com/s.kashifabbas" },
                         { icon: Mail, label: "Gmail", href: "mailto:shahkabbas@gmail.com" },
                       ].map(({ icon: Icon, label, href }, index) => (
                         <motion.div
@@ -1086,7 +1086,7 @@ ACHIEVEMENTS
           <div className="flex items-center space-x-4">
             {[
               { icon: Linkedin, href: "https://linkedin.com/in/shah-kashif-abbas", label: "LinkedIn" },
-              { icon: Instagram, href: "https://instagram.com", label: "Instagram" },
+              { icon: Instagram, href: "https://instagram.com/s.kashifabbas", label: "Instagram" },
               { icon: Mail, href: "mailto:shahkabbas@gmail.com", label: "Gmail" },
             ].map(({ icon: Icon, href, label }, index) => (
               <motion.div
