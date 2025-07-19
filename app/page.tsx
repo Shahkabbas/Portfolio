@@ -515,7 +515,7 @@ ACHIEVEMENTS
                     transition={{ type: "spring", stiffness: 400, damping: 10 }}
                   >
                     <span className="text-sm font-medium">📞</span>
-                    <span className="text-sm">7470839068</span>
+                    <span className="text-sm">+91 7470839068</span>
                   </motion.div>
                   <motion.div
                     className="flex items-center gap-2"
