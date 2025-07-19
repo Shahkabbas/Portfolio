@@ -1,3 +1,4 @@
+import { Download } from "lucide-react"
 "use client"
 
 import { Button } from "@/components/ui/button"
@@ -171,74 +172,24 @@ export default function Portfolio() {
             <div className="w-full flex-1 md:w-auto md:flex-none flex items-center gap-2">
               <ThemeToggle />
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <Button
-                  variant="outline"
-                  size="sm"
-                  onClick={() => {
-                    // Create resume content as PDF download
-                    const resumeContent = `
-SHAH KASHIF ABBAS
-Bhopal MP • shahkabbas@gmail.com | 7470839068
-linkedin.com/in/shah-kashif-abbas
-
-PROFILE SUMMARY
-Certified Pharmacovigilance and MedDRA professional with a B.Pharm background and practical exposure in QA, QC, R&D, and Validation at Glenmark Pharmaceuticals. Skilled in ICSR processing, MedDRA coding, and safety data handling, with working knowledge of SQL and Excel. Strong communication, team leadership, and adaptability with a keen interest in drug safety, clinical data, and regulatory-focused roles.
-
-EDUCATION
-Bachelor of Pharmacy (B.Pharm) - CGPA: 7.61
-Laxmi Narain College of Pharmacy, Bhopal (Nov 2021 - June 2025)
-Relevant Coursework: Pharmacology, Regulatory Affairs, and Clinical Pharmacy
-
-Senior Secondary Education
-St. Xavier's Sr. Sec. Co-Ed. School, Bhopal
-Class 12th - CGPA: 8.6 | Class 10th - CGPA: 8.3
-
-PROFESSIONAL EXPERIENCE
-Intern - Glenmark Life Sciences Ltd., Gujarat (2024)
-• Gained hands-on experience in pharmaceutical quality assurance, validation processes, and regulatory documentation
-• Assisted in routine quality control procedures including sampling, testing, and analysis
-• Observed R&D formulation development processes and learned data recording compliance
-• Contributed to validation documentation and protocol preparation per cGMP standards
-
-CERTIFICATIONS
-• Certification Training in QA, QC & R&D – Glenmark Life Sciences
-• Certificate Course in Pharmacovigilance – SG Pharma Trainings
-• MedDRA Training Certificate Course – PV Drug Safety Academy
-
-SKILLS
-• Pharmacovigilance: ICSR Processing, MedDRA Coding, Adverse Event Reporting
-• Quality Assurance: QA/QC Procedures, Validation, cGMP, Documentation
-• Technical: MS Excel, SQL, Data Analysis, Clinical Data, Research
-
-ACHIEVEMENTS
-• Participated in National-Level Case Study Competition on Drug Safety Trends
-• Led 3-member academic project team for PV system improvements
-• Built and managed Instagram page to 20,000+ followers
-• Organized academic seminars on drug safety and industry trends
-                    `
-
-                    // Create and download the resume as a text file (you can enhance this to create actual PDF)
-                    const blob = new Blob([resumeContent], { type: "text/plain" })
-                    const url = window.URL.createObjectURL(blob)
-                    const link = document.createElement("a")
-                    link.href = url
-                    link.download = "Shah_Kashif_Abbas_Resume.txt"
-                    document.body.appendChild(link)
-                    link.click()
-                    document.body.removeChild(link)
-                    window.URL.revokeObjectURL(url)
-                  }}
-                  className="hover:bg-gradient-to-r hover:from-blue-500/10 hover:to-purple-600/10 transition-all duration-300 bg-transparent"
-                >
-                  <Download className="mr-2 h-4 w-4" />
-                  Resume
-                </Button>
-              </motion.div>
-            </div>
-          </div>
-        </div>
-      </motion.nav>
-
+  <Button
+    variant="outline"
+    size="sm"
+    asChild
+    className="hover:bg-gradient-to-r hover:from-blue-500/10 hover:to-purple-600/10 transition-all duration-300 bg-transparent"
+  >
+    <a
+      href="/resume.pdf"
+      download
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center gap-2"
+    >
+      <Download className="h-4 w-4" />
+      Resume
+    </a>
+  </Button>
+</motion.div>
       {/* Hero Section */}
       <section
         ref={heroRef}
