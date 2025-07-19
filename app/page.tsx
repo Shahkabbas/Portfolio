@@ -60,41 +60,23 @@ export default function Portfolio() {
 
   const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "50%"])
 
-  // Handle resume download
-  const handleResumeDownload = () => {
-    const resumeContent = `
-SHAH KASHIF ABBAS
-Bhopal MP • shahkabbas@gmail.com | 7470839068
-linkedin.com/in/shah-kashif-abbas
+// Resume Handler 
+ <Button
+  variant="outline"
+  size="icon"
+  asChild
+>
+  <a
+    href="/resume.pdf"
+    download
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <Download className="h-4 w-4" />
+    <span className="sr-only">Download Resume</span>
+  </a>
+</Button>
 
-PROFILE SUMMARY
-Certified Pharmacovigilance and MedDRA professional with a B.Pharm background and practical exposure in QA, QC, R&D, and Validation at Glenmark Pharmaceuticals. Skilled in ICSR processing, MedDRA coding, and safety data handling, with working knowledge of SQL and Excel.
-
-EDUCATION
-Bachelor of Pharmacy (B.Pharm) - CGPA: 7.61
-Laxmi Narain College of Pharmacy, Bhopal (Nov 2021 - June 2025)
-
-PROFESSIONAL EXPERIENCE
-Intern - Glenmark Life Sciences Ltd., Gujarat (2024)
-• Quality assurance, validation processes, and regulatory documentation
-• Quality control procedures including sampling, testing, and analysis
-
-CERTIFICATIONS
-• QA, QC & R&D Training – Glenmark Life Sciences
-• Pharmacovigilance Course – SG Pharma Trainings  
-• MedDRA Training – PV Drug Safety Academy
-  `
-
-    const blob = new Blob([resumeContent], { type: "text/plain" })
-    const url = window.URL.createObjectURL(blob)
-    const link = document.createElement("a")
-    link.href = url
-    link.download = "Shah_Kashif_Abbas_Resume.txt"
-    document.body.appendChild(link)
-    link.click()
-    document.body.removeChild(link)
-    window.URL.revokeObjectURL(url)
-  }
 
   // Smooth scroll function
   const scrollToSection = (sectionId: string) => {
