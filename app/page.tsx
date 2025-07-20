@@ -166,6 +166,8 @@ export default function Portfolio() {
     </Button>
   </motion.div>
 </div>
+</div>            
+</motion.nav>
 
 
       {/* Hero Section */}
