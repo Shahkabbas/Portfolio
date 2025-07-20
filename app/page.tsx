@@ -138,13 +138,6 @@ export default function Portfolio() {
       ))}
     </div>
 
-    {/* Mobile Menu Button */}
-    <div className="md:hidden">
-      <Button variant="outline" size="icon" className="bg-transparent">
-        <Menu className="h-5 w-5" />
-      </Button>
-    </div>
-
     {/* Right Controls */}
     <div className="flex items-center gap-2 ml-4">
       <ThemeToggle />
