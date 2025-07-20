@@ -67,7 +67,7 @@ export default function Portfolio() {
       element.scrollIntoView({ behavior: "smooth" })
     }
   }
-}
+
   return (
     <div className="min-h-screen bg-background relative">
       {/* Floating background elements */}
