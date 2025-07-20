@@ -150,21 +150,23 @@ export default function Portfolio() {
             <Menu className="h-4 w-4" />
           </Button>
           <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
-            <div className="w-full flex-1 md:w-auto md:flex-none flex items-center gap-2">
-              <ThemeToggle />
-<motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-  <Button
-    variant="outline"
-    size="sm"
-    asChild
-    className="hover:bg-gradient-to-r hover:from-blue-500/10 hover:to-purple-600/10 transition-all duration-300 bg-transparent"
-  >
-    <a href="/resume.pdf" download className="flex items-center gap-2">
-      <Download className="h-4 w-4" />
-      Resume
-    </a>
-  </Button>
-</motion.div>
+<div className="w-full flex-1 md:w-auto md:flex-none flex items-center gap-2">
+  <ThemeToggle />
+  <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+    <Button
+      variant="outline"
+      size="sm"
+      asChild
+      className="hover:bg-gradient-to-r hover:from-blue-500/10 hover:to-purple-600/10 transition-all duration-300 bg-transparent"
+    >
+      <a href="/resume.pdf" download className="flex items-center gap-2">
+        <Download className="h-4 w-4" />
+        Resume
+      </a>
+    </Button>
+  </motion.div>
+</div>
+
 
       {/* Hero Section */}
       <section
