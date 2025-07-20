@@ -169,6 +169,8 @@ export default function Portfolio() {
 
 
       {/* Hero Section */}
+            
+      <div>
       <section
         ref={heroRef}
         className="container flex min-h-[calc(100vh-4rem)] items-center justify-center py-12 relative"
@@ -335,6 +337,7 @@ export default function Portfolio() {
           </motion.div>
         </motion.div>
       </section>
+      </div>
 
       {/* About Section */}
       <section id="about" className="container py-16 md:py-24">
