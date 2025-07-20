@@ -100,6 +100,7 @@ export default function Portfolio() {
           }}
         />
       </div>
+      </div>
 
       {/* Progress Bar */}
       <motion.div
