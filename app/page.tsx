@@ -115,30 +115,51 @@ export default function Portfolio() {
   animate={{ y: 0 }}
   transition={{ duration: 0.6, ease: "easeOut" }}
 >
-  <div className="container flex h-16 items-center">
-    <div className="mr-4 hidden md:flex">
-      …your logo & link nav…
+  <div className="container flex h-16 items-center justify-between">
+    
+    {/* Logo or Name */}
+    <div className="flex items-center space-x-2 font-bold text-lg">
+      <Link href="/" className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+        Shah Kashif Abbas
+      </Link>
     </div>
 
-    <Button variant="outline" size="icon" className="md:hidden bg-transparent">
-      <Menu className="h-4 w-4" />
-    </Button>
-
-    <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
-      <div className="w-full flex-1 md:w-auto md:flex-none flex items-center gap-2">
-        <ThemeToggle />
-        <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-          <Button variant="outline" size="sm" asChild className="…">
-            <a href="/resume.pdf" download className="flex items-center gap-2">
-              <Download className="h-4 w-4" />
-              Resume
-            </a>
-          </Button>
-        </motion.div>
-      </div>
+    {/* Desktop Navigation Links */}
+    <div className="hidden md:flex items-center space-x-6 text-sm font-medium">
+      {["About", "Skills", "Experience", "Education", "Contact"].map((item) => (
+        <button
+          key={item}
+          onClick={() => scrollToSection(item.toLowerCase())}
+          className="transition-colors hover:text-foreground/80 relative group"
+        >
+          {item}
+          <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-600 group-hover:w-full transition-all duration-300" />
+        </button>
+      ))}
     </div>
-  </div>       {/* ← CLOSE container */}
+
+    {/* Mobile Menu Button */}
+    <div className="md:hidden">
+      <Button variant="outline" size="icon" className="bg-transparent">
+        <Menu className="h-5 w-5" />
+      </Button>
+    </div>
+
+    {/* Right Controls */}
+    <div className="flex items-center gap-2 ml-4">
+      <ThemeToggle />
+      <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+        <Button variant="outline" size="sm" asChild>
+          <a href="/resume.pdf" download className="flex items-center gap-2">
+            <Download className="h-4 w-4" />
+            Resume
+          </a>
+        </Button>
+      </motion.div>
+    </div>
+  </div>
 </motion.nav>
+
 
       {/* Hero Section */}
             
