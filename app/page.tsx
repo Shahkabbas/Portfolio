@@ -160,12 +160,11 @@ export default function Portfolio() {
     className="hover:bg-gradient-to-r hover:from-blue-500/10 hover:to-purple-600/10 transition-all duration-300 bg-transparent"
   >
     <a
-      href="/resume.pdf"
-      download
-      target="_blank"
-      rel="noopener noreferrer"
-      className="flex items-center gap-2"
-    >
+  href="/resume.pdf"
+  download
+  className="flex items-center gap-2"
+>
+
       <Download className="h-4 w-4" />
       Resume
     </a>
